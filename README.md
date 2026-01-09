@@ -2,6 +2,14 @@
 
 O HCooling é uma ferramenta prática para gerenciamento de perfis de energia e monitoramento de temperatura do seu sistema.
 
+---
+### 📸 Interface do Programa
+
+
+*![Screenshot do HCooling](https://github.com/akaharo/HCooling-Installer/blob/main/screenshot.png)*
+
+---
+
 ## 📥 Como Baixar e Instalar
 
 Siga os passos abaixo para começar a usar o HCooling:
