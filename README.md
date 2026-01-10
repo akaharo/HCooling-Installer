@@ -1,4 +1,4 @@
-# ❄️ HCooling-Installer
+# ❄️ HCooling
 
 O HCooling é uma ferramenta prática para gerenciamento de perfis de energia e monitoramento de temperatura do seu sistema, utilizei as bibliotecas do **Open Hardware Monitor** para a coleta de dados de temperatura em tempo real. É normal notar o processo do Open Hardware Monitor rodando junto ao gerenciador de tarefas.
 
