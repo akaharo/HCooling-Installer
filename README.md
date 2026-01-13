@@ -26,6 +26,8 @@ Siga os passos abaixo para começar a usar o HCooling:
 * Windows 10/11
 * 4 GB de RAM
 * Permissões de administrador (necessário para acesso aos sensores via Open Hardware Monitor).
+* Desktop PC
+* Notebook (Usar versão alternativa mais recente para Notebooks) em **Releases**
   
 
 ## 📞 Suporte
