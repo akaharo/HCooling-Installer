@@ -25,6 +25,8 @@ Siga os passos abaixo para começar a usar o HCooling:
 ## 💻 Requisitos do Sistema
 * Windows 10/11
 * 4 GB de RAM
+* **.NET Framework 4.5** (ou superior) instalado.
+* **Pacote Visual C++ 2015-2022** (x86/x64) instalado.
 * Permissões de administrador (necessário para acesso aos sensores via Open Hardware Monitor).
 * Desktop PC
 * Notebook (Usar versão alternativa mais recente para notebooks) em **[Releases](../../releases)**
