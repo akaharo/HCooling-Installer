@@ -30,6 +30,7 @@ Siga os passos abaixo para começar a usar o HCooling:
 * Permissões de administrador (necessário para acesso aos sensores via Open Hardware Monitor).
 * Desktop PC
 * Notebook (Usar versão alternativa mais recente para notebooks) em **[Releases](../../releases)**
+* Não funciona em versões Lite do windows
   
 
 ## 📞 Suporte
