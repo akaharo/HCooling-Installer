@@ -6,7 +6,7 @@ O HCooling é uma ferramenta prática para gerenciamento de perfis de energia e 
 ### 📸 Interface do Programa
 
 
-*![Screenshot do HCooling](https://github.com/akaharo/HCooling-Installer/releases/download/1.1.0/screenshot.png)*
+<img width="832" height="765" alt="screenshot" src="https://github.com/user-attachments/assets/0d23b490-14da-4d97-9e73-840491b3f127" />
 
 ---
 
