@@ -6,7 +6,7 @@ Aplicativo para Windows que reúne monitoramento de hardware e gerenciamento de 
 ![Plataforma](https://img.shields.io/badge/plataforma-Windows%2010%20%7C%2011-0078D6?logo=windows)
 ![Arquitetura](https://img.shields.io/badge/arquitetura-x64-blue)
 ![Interface](https://img.shields.io/badge/interface-Electron%20%2B%20JavaScript-47848F?logo=electron)
-![Sensores](https://img.shields.io/badge/sensores-C%23%20%2B%20.NET-512BD4?logo=dotnet)
+![Sensores](https://img.shields.io/badge/sensores-C%23%20%2B%20.NET%20Framework%204.7.2-512BD4?logo=dotnet)
 
 > Este repositório é destinado à distribuição do instalador e das atualizações do HCooling.
 
@@ -16,9 +16,20 @@ Aplicativo para Windows que reúne monitoramento de hardware e gerenciamento de 
 
 Na seção **Assets** da release, baixe o arquivo `HCooling.Setup.<versão>.exe`.
 
+## ⚠️ Requisito obrigatório
+
+O HCooling precisa do **Microsoft .NET Framework 4.7.2 ou superior** para executar o componente responsável pela leitura dos sensores.
+
+- O requisito é o **.NET Framework clássico 4.x**, não o .NET 6, 7, 8, 9 ou o SDK do .NET;
+- Se o computador já possui .NET Framework 4.8 ou 4.8.1, não é necessário instalar a versão 4.7.2;
+- Windows 10 e Windows 11 atualizados normalmente já possuem uma versão compatível;
+- Se o runtime estiver ausente, use o [download oficial do .NET Framework 4.7.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472).
+
+O instalador do HCooling **não inclui o runtime do .NET Framework**.
+
 ## 🖥️ Interface
 
-![Interface do HCooling](./screenshot.png)
+![Interface atual do HCooling](./screenshot.png)
 
 ## ✨ Recursos
 
@@ -37,12 +48,23 @@ Na seção **Assets** da release, baixe o arquivo `HCooling.Setup.<versão>.exe`
 | --- | --- |
 | Sistema operacional | Windows 10 ou Windows 11 de 64 bits |
 | Arquitetura | Processador e sistema x64 |
-| Runtime | Microsoft .NET Framework 4.7.2 ou superior |
-| Permissões | Acesso de administrador para leitura dos sensores e aplicação dos perfis de energia |
+| Runtime obrigatório | Microsoft .NET Framework 4.7.2, 4.8 ou 4.8.1 |
+| Permissões | Execução como administrador para acessar sensores e alterar perfis com `powercfg` |
+| Espaço em disco | Aproximadamente 350 MB instalados; recomenda-se pelo menos 500 MB livres |
 | Hardware | Sensores compatíveis e expostos pela placa-mãe, CPU e GPU |
-| Internet | Necessária para baixar o instalador e receber atualizações automáticas |
+| Internet | Opcional após a instalação; usada apenas para download e atualizações |
 
-O instalador já inclui o Electron, o componente de leitura de sensores e as bibliotecas usadas pelo aplicativo. **Não é necessário instalar Node.js, npm, Electron ou o SDK do .NET manualmente.**
+## 📦 O que preciso instalar separadamente?
+
+| Componente | Precisa instalar? | Motivo |
+| --- | --- | --- |
+| .NET Framework 4.7.2 ou superior | **Sim, somente se estiver ausente** | Runtime do `HCooling.SensorHost.exe` |
+| Node.js e npm | Não | O runtime necessário acompanha o Electron |
+| Electron e Chromium | Não | Já estão empacotados no aplicativo |
+| SDK do .NET | Não | O SDK é necessário apenas para desenvolvimento, não para executar |
+| Microsoft Edge WebView2 | Não | A interface usa o Chromium incluído no Electron |
+| Bibliotecas de sensores | Não | Todas as DLLs necessárias acompanham o instalador |
+| Drivers de chipset e GPU | Recomendado mantê-los atualizados | Podem influenciar a disponibilidade e a identificação dos sensores |
 
 ## 🧩 Tecnologias e linguagens
 
@@ -51,26 +73,28 @@ O instalador já inclui o Electron, o componente de leitura de sensores e as bib
 | Interface | HTML5 e CSS3 | Estrutura, tema e componentes visuais |
 | Aplicação desktop | JavaScript e Electron 39 | Interface, configurações, integração com o Windows e atualizações |
 | Sensores | C# e .NET Framework 4.7.2 | Processo auxiliar responsável pela leitura do hardware |
-| Monitoramento | LibreHardwareMonitor, OpenHardwareMonitor e `systeminformation` | Coleta de temperaturas, uso, clocks e informações do sistema |
+| Monitoramento | LibreHardwareMonitor, OpenHardwareMonitor e `systeminformation` | Temperaturas, uso, clocks e informações do sistema |
 | Gráficos | Chart.js 4 | Histórico visual das temperaturas |
+| Perfis de energia | `powercfg` do Windows | Aplicação dos limites de energia do processador |
 | Instalador | electron-builder e NSIS | Empacotamento e instalação no Windows |
 
-## 📦 Dependências incluídas
+## 📚 Dependências incluídas no instalador
 
-- Electron 39;
+- Electron 39, com Chromium e Node.js;
 - Chart.js 4.5;
 - `systeminformation` 5.30;
-- HCooling Sensor Host;
+- HCooling Sensor Host x64;
 - LibreHardwareMonitor e OpenHardwareMonitor;
-- Bibliotecas auxiliares necessárias para acesso aos sensores.
+- Bibliotecas auxiliares usadas na leitura dos sensores.
 
 ## 🚀 Instalação
 
-1. Baixe o instalador na [release mais recente](https://github.com/akaharo/HCooling-Installer/releases/latest).
-2. Execute `HCooling.Setup.<versão>.exe`.
-3. Escolha a pasta de instalação e conclua o processo.
-4. Abra o HCooling pelo atalho criado na área de trabalho.
-5. Autorize a execução como administrador quando o Windows solicitar.
+1. Confirme que o Windows possui **.NET Framework 4.7.2 ou superior**.
+2. Baixe o instalador na [release mais recente](https://github.com/akaharo/HCooling-Installer/releases/latest).
+3. Execute `HCooling.Setup.<versão>.exe`.
+4. Escolha a pasta de instalação e conclua o processo.
+5. Abra o HCooling pelo atalho criado na área de trabalho.
+6. Autorize a execução como administrador quando o Windows solicitar.
 
 ## ℹ️ Observações de compatibilidade
 
