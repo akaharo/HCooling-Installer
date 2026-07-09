@@ -1,37 +1,29 @@
 # ❄️ HCooling
 
-O HCooling é uma ferramenta prática para gerenciamento de perfis de energia e monitoramento de temperatura do seu sistema, utilizei as bibliotecas do **Open Hardware Monitor** para a coleta de dados de temperatura em tempo real. É normal notar o processo do Open Hardware Monitor rodando junto ao gerenciador de tarefas.
+O HCooling é um aplicativo para monitoramento de hardware e gerenciamento de perfis de energia no Windows.
 
----
-### 📸 Interface do Programa
+## 📥 Download
 
+**[Baixar a versão mais recente](https://github.com/akaharo/HCooling-Installer/releases/latest)**
 
-<img width="852" height="875" alt="screenshot" src="https://github.com/akaharo/HCooling-Installer/releases/download/1.2.8/screenshot.png" />
+Na seção **Assets** da release, baixe o arquivo `HCooling.Setup.<versão>.exe`.
 
----
+## Instalação
 
-## 📥 Como Baixar e Instalar
+1. Execute o instalador baixado.
+2. Escolha a pasta de instalação e conclua o processo.
+3. Abra o HCooling pelo atalho criado na área de trabalho.
 
-Siga os passos abaixo para começar a usar o HCooling:
+O Windows poderá solicitar permissão de administrador, necessária para acessar os sensores e aplicar os perfis de energia.
 
-1. Vá até a aba de **[Releases](../../releases)** aqui no repositório (ou clique na seção "Releases" na barra lateral direita).
-2. Na versão mais recente ("Latest"), baixe o arquivo **`HCooling-Installer.exe`**.
-3. Execute o arquivo baixado e conclua a **instalação**.
-4. Abra o **HCooling** como administrador pelo atalho criado.
-5. Na interface, selecione o **Perfil de Energia Desejado**.
-6. Observe a **temperatura** atual do sistema, exibida no lado direito das opções.
-> **⏳ Importante:** Ao abrir o programa pela primeira vez, a temperatura pode levar de **10 a 12 segundos** para aparecer. Esse é o tempo necessário para o Open Hardware Monitor iniciar a leitura dos sensores em segundo plano.
+## Recursos
 
-## 💻 Requisitos do Sistema
-* Windows 10/11
-* 4 GB de RAM
-* **.NET Framework 4.5** (ou superior) instalado.
-* **Pacote Visual C++ 2015-2022** (x86/x64) instalado.
-* Permissões de administrador (necessário para acesso aos sensores via Open Hardware Monitor).
-* Desktop PC
-* Notebook (Usar versão alternativa mais recente para notebooks) em **[Releases](../../releases)**
-* Não funciona em versões Lite do windows
-  
+- Temperatura, uso e frequência da CPU e da GPU;
+- Uso da memória RAM;
+- Histórico de temperaturas, com valores mínimos e máximos;
+- Perfis de energia: desempenho máximo, uso padrão e modo frio;
+- Inicialização com o Windows e execução em segundo plano;
+- Intervalo de atualização dos sensores configurável;
+- Atualizações automáticas pelo próprio aplicativo.
 
-## 📞 Suporte
-Se encontrar algum bug, por favor abra uma "Issue" aqui no GitHub.
+> Disponível para Windows 10 e Windows 11.
