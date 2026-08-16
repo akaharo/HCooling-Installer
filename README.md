@@ -29,7 +29,9 @@ O instalador do HCooling **não inclui o runtime do .NET Framework**.
 
 ## 🖥️ Interface
 
-![Interface atual do HCooling](./screenshot.png)
+Visual atual do HCooling 1.3.8:
+
+![Interface do HCooling 1.3.8](./screenshot.png)
 
 ## ✨ Recursos
 
