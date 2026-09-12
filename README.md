@@ -98,6 +98,12 @@ Visual atual do HCooling 1.3.9:
 5. Abra o HCooling pelo atalho criado na área de trabalho.
 6. Autorize a execução como administrador quando o Windows solicitar.
 
+## 🗑️ Desinstalação
+
+1. Encerre o HCooling pelo ícone na área de notificação do Windows.
+2. Abra **Configurações > Aplicativos > Aplicativos instalados**.
+3. Localize **HCooling**, selecione **Desinstalar** e confirme a remoção.
+
 ## ℹ️ Observações de compatibilidade
 
 - A disponibilidade de cada temperatura depende dos sensores expostos pelo hardware e pelo firmware do computador;
